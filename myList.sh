@@ -7,18 +7,18 @@
 
 #Defining constants to be used in HTML code
 directoryName=$(pwd)
-siteTitle="MyList Top Level Directory Contents"
+siteTitle="MyList: Top Level Directory Contents"
 locationTitle=" Folder Location: $directoryName"
 
 
 #Function to populate directory content
 listFunction(){
-	printf '%s<br>' *
+   printf '%s<br>' *
 }
 
 #Create html fill
 cat > myList.html <<_EOF_
-	31
+	
   <html>
   <head>
     <h1> $siteTitle </h1>
@@ -28,6 +28,7 @@ cat > myList.html <<_EOF_
     <ul> $(listFunction) </ul>
     
   </body>
+    <p align="right"> "By The Boyos" </p>
   </html>
 
 _EOF_
@@ -36,4 +37,6 @@ _EOF_
 #open html in browser
 firefox myList.html
 
+sleep 1
 
+rm myList.html
