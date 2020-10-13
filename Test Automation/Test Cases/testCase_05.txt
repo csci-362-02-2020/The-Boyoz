@@ -1,0 +1,7 @@
+5
+Takes a color object and outputs a string of the HSL value (hue, saturation, lightness)
+ColorConverter.java
+rgb2Hsl
+81,54,200
+“hsl(292.2, 57.5%, 49.8%)”
+

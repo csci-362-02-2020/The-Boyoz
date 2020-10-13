@@ -28,7 +28,7 @@ cat > myList.html <<_EOF_
     <ul> $(listFunction) </ul>
     
   </body>
-    <p align="right"> "By The Boyos" </p>
+    <p align="right"> "😎️By The Boyos" </p>
   </html>
 
 _EOF_
