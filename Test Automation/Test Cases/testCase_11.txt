@@ -2,5 +2,5 @@
 Calculates Euclidian distance between two colors
 DistanceCalculator.java
 calculate
-input
+"#000000,#ffffff"
 output
