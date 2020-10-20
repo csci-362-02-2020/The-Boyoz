@@ -1,0 +1,6 @@
+21
+Finds the contrast of an inputted color object
+ContrastChecker.java
+computeContrast
+input
+output
