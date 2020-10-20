@@ -1,6 +1,0 @@
-8
-Takes a string input of a hexadecimal value and converts those values to a string RGB
-ColorConverter.java
-hex2Rgb
-input
-output

@@ -1,6 +1,0 @@
-17
-Calculates distance between two colors
-ContrastChecker.java
-distanceColor
-input
-output
