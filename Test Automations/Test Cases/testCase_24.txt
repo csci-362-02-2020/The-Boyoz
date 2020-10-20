@@ -2,5 +2,5 @@
 Finds the contrast of an inputted color object
 ContrastChecker.java
 computeContrast
-input
+input (0.99,0.01)
 output
