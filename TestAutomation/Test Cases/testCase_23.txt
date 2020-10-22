@@ -1,6 +1,6 @@
 23
-Finds the contrast of an inputted color object
+Finds the contrast ratio of two colors
 ContrastChecker.java
-computeContrast
-"0.23,0.34"
+getContrastRatio
+"#a1b2c3,#1a2b3c"
 output
