@@ -5,10 +5,15 @@ public class calculateDriver{
 
 	public static void main(String[] args){
 		
-		Color firstColor = Color.decode(args[0]);
-		Color secondColor = Color.decode(args[1]);
+		DistanceCalculator temp = new DistanceCalculator();
 		
-		System.out.println(DistanceCalculator.calculate(firstColor,secondColor));
+		String firstArg = "#" + args[0]; 
+		String secondArg = "#" + args[1]; 
+	
+		Color firstColor = Color.decode(firstArg);
+		Color secondColor = Color.decode(secondArg);
+		
+		System.out.println(temp.calculate(firstColor,secondColor));
 			
 	}
 }

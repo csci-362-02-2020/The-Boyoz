@@ -1,9 +1,9 @@
 import java.awt.Color;
 
-public class distanceColorDriver{
+public class getContrastRatioDriver{
 
 	public static void main(String[] args){
-	
+		
 		ContrastChecker checker = new ContrastChecker();
 		
 		String firstArg = "#" + args[0]; 
@@ -12,6 +12,8 @@ public class distanceColorDriver{
 		Color firstColor = Color.decode(firstArg);
 		Color secondColor = Color.decode(secondArg);
 		
-		System.out.println(checker.distanceColor(firstColor,secondColor));
+		System.out.println(checker.getContrastRatio(firstColor,secondColor));
 	}
 }
+	
+		

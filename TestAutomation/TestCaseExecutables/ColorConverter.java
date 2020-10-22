@@ -43,7 +43,7 @@ public final class ColorConverter {
     /**
      * Private constructor, utility class
      */
-    private ColorConverter() {
+    public ColorConverter() {
     }
 
     /**

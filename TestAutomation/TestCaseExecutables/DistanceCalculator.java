@@ -18,7 +18,7 @@
  * Contact us by mail: open-s AT open-s DOT com
  */
 
-package TestCaseExecutables;
+
 
 import java.awt.Color;
 
@@ -27,7 +27,7 @@ public final class DistanceCalculator {
     private static final int CUBIC = 3;
     private static final int ROUND_VALUE = 100;
     
-    private DistanceCalculator() {
+    public DistanceCalculator() {
     }
 
     /**
