@@ -3,10 +3,8 @@
 #Moves up to the main folder
 cd ..
 
-
 #Compiles all classes in TestCaseExecutables
 javac TestCaseExecutables/*.java
-
 
 for file in TestCases/*.txt
 	do
@@ -15,16 +13,16 @@ for file in TestCases/*.txt
 while read line
 	do
 		lines[$i]="$line";
-		i=$((i+1))
+		i=$((i+1));
 		done < $file
 		
 	declare id=${lines[0]}
 	declare requirement=${lines[1]}
-	declare class=${lines[0]}
-	declare method=${lines[0]}
-	declare input=${lines[0]}
-	declare expectedOutput=${lines[0]}
-	declare output
+	declare class=${lines[2]}
+	declare method=${lines[3]}
+	declare input=${lines[4]}
+	declare expectedOutput=${lines[5]}
+	#declare output
 	
 	echo $id
 	echo $requirement
@@ -32,8 +30,11 @@ while read line
 	echo $method
 	echo $input
 	echo $expectedOutput
+	echo 
 
-	java $method $input
+	sleep 1
+
+	#java $method $input
 
 	done
 	
