@@ -3,5 +3,4 @@ Takes a color object and outputs a string of the HSL value (hue, saturation, lig
 ColorConverter.java
 rgb2Hsl
 abc123
-“hsl(68, 69%, 44%)”
-
+hsl(68, 69%, 44%)

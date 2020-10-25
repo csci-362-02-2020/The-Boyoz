@@ -3,4 +3,4 @@ Takes a string input of a hexadecimal value and converts those values to a strin
 ColorConverter.java
 hex2Rgb
 ffffff
-"java.awt.Color[r=255,g=255,b=255]"
+java.awt.Color[r=255,g=255,b=255]

@@ -3,4 +3,4 @@ Calculates Euclidian distance between two colors
 DistanceCalculator.java
 calculate
 000000 ffffff
-output
+441.67

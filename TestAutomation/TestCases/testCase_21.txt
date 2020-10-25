@@ -3,4 +3,4 @@ Finds the contrast ratio of two colors
 ContrastChecker.java
 getContrastRatio
 000000 ffffff
-output
+21.0
