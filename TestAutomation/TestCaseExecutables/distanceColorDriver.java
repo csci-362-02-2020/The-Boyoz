@@ -12,6 +12,6 @@ public class distanceColorDriver{
 		Color firstColor = Color.decode(firstArg);
 		Color secondColor = Color.decode(secondArg);
 		
-	System.out.println(checker.distanceColor(firstColor,secondColor));
+		System.out.println(checker.distanceColor(firstColor,secondColor));
 	}
 }
