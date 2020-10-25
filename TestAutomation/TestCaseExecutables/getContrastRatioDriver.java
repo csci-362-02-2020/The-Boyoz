@@ -12,7 +12,7 @@ public class getContrastRatioDriver{
 		Color firstColor = Color.decode(firstArg);
 		Color secondColor = Color.decode(secondArg);
 		
-		System.out.println(checker.getContrastRatio(firstColor,secondColor));
+	System.out.println(checker.getContrastRatio(firstColor,secondColor));
 	}
 }
 	

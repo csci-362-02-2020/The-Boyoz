@@ -1,6 +1,6 @@
-25
+21
 Finds the contrast ratio of two colors
 ContrastChecker.java
 getContrastRatio
-"#10af7d,#fd65c4"
+000000 ffffff
 output

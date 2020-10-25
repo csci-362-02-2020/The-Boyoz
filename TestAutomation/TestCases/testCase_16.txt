@@ -2,5 +2,5 @@
 Calculates distance between two colors
 ContrastChecker.java
 distanceColor
-"#000000,#ffffff"
-output
+000000 ffffff
+441.6729559300637

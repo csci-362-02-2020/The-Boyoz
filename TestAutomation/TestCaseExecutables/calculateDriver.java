@@ -13,7 +13,7 @@ public class calculateDriver{
 		Color firstColor = Color.decode(firstArg);
 		Color secondColor = Color.decode(secondArg);
 		
-		System.out.println(temp.calculate(firstColor,secondColor));
+	System.out.println(temp.calculate(firstColor,secondColor));
 			
 	}
 }
