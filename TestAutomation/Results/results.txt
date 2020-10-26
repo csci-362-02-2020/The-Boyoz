@@ -1,0 +1,225 @@
+1
+Takes a color object and outputs a string of the HSL value (hue, saturation, lightness)
+ColorConverter.java
+rgb2Hsl
+000000
+hsl(0, 0%, 0%)
+hsl(0, 0%, 0%)
+pass
+
+2
+Takes a color object and outputs a string of the HSL value (hue, saturation, lightness)
+ColorConverter.java
+rgb2Hsl
+ffffff
+hsl(0, 0%, 100%)
+hsl(0, 0%, 100%)
+pass
+
+3
+Takes a color object and outputs a string of the HSL value (hue, saturation, lightness)
+ColorConverter.java
+rgb2Hsl
+1234fc
+hsl(231, 97%, 52%)
+hsl(231, 97%, 52%)
+pass
+
+4
+Takes a color object and outputs a string of the HSL value (hue, saturation, lightness)
+ColorConverter.java
+rgb2Hsl
+abc123
+hsl(68, 69%, 44%)
+hsl(68, 69%, 44%)
+pass
+
+5
+Takes a color object and outputs a string of the HSL value (hue, saturation, lightness)
+ColorConverter.java
+rgb2Hsl
+8f32a6
+hsl(288, 53%, 42%)
+hsl(288, 53%, 42%)
+pass
+
+6
+Takes a string input of a hexadecimal value and converts those values to a string RGB
+ColorConverter.java
+hex2Rgb
+000000
+java.awt.Color[r=0,g=0,b=0]
+java.awt.Color[r=0,g=0,b=0]
+pass
+
+7
+Takes a string input of a hexadecimal value and converts those values to a string RGB
+ColorConverter.java
+hex2Rgb
+ffffff
+java.awt.Color[r=255,g=255,b=255]
+java.awt.Color[r=255,g=255,b=255]
+pass
+
+8
+Takes a string input of a hexadecimal value and converts those values to a string RGB
+ColorConverter.java
+hex2Rgb
+2f4a2c
+java.awt.Color[r=47,g=74,b=44]
+java.awt.Color[r=47,g=74,b=44]
+pass
+
+9
+Takes a string input of a hexadecimal value and converts those values to a string RGB
+ColorConverter.java
+hex2Rgb
+123abc
+java.awt.Color[r=18,g=58,b=188]
+java.awt.Color[r=18,g=58,b=188]
+pass
+
+10
+Takes a string input of a hexadecimal value and converts those values to a string RGB
+ColorConverter.java
+hex2Rgb
+a98cef
+java.awt.Color[r=169,g=140,b=239]
+java.awt.Color[r=169,g=140,b=239]
+pass
+
+11
+Calculates Euclidian distance between two colors
+DistanceCalculator.java
+calculate
+000000 ffffff
+441.67
+367.77
+fail
+
+12
+Calculates Euclidian distance between two colors
+DistanceCalculator.java
+calculate
+123abc abc123
+255.04
+135.0
+fail
+
+13
+Calculates Euclidian distance between two colors
+DistanceCalculator.java
+calculate
+a1b2c3 1a2b3c
+233.83
+194.7
+fail
+
+14
+Calculates Euclidian distance between two colors
+DistanceCalculator.java
+calculate
+1e8c66 a34c6b
+147.68
+127.87
+fail
+
+15
+Calculates Euclidian distance between two colors
+DistanceCalculator.java
+calculate
+10af7d fd65c4
+258.24
+236.72
+fail
+
+16
+Calculates distance between two colors
+ContrastChecker.java
+distanceColor
+000000 ffffff
+441.6729559300637
+441.6729559300637
+pass
+
+17
+Calculates distance between two colors
+ContrastChecker.java
+distanceColor
+123abc abc123
+255.03529167548558
+255.03529167548558
+pass
+
+18
+Calculates distance between two colors
+ContrastChecker.java
+distanceColor
+a1b2c3 1a2b3c
+233.82685902179844
+233.82685902179844
+pass
+
+19
+Calculates distance between two colors
+ContrastChecker.java
+distanceColor
+1e8c66 a34c6b
+147.68209099278084
+147.68209099278084
+pass
+
+20
+Calculates distance between two colors
+ContrastChecker.java
+distanceColor
+10af7d 10af7d
+0.0
+0.0
+pass
+
+21
+Finds the contrast ratio of two colors
+ContrastChecker.java
+getContrastRatio
+000000 ffffff
+21.0
+21.0
+pass
+
+22
+Finds the contrast ratio of two colors
+ContrastChecker.java
+getContrastRatio
+123abc abc123
+4.405327061494763
+4.405327061494763
+pass
+
+23
+Finds the contrast ratio of two colors
+ContrastChecker.java
+getContrastRatio
+a1b2c3 1a2b3c
+6.648415996056606
+6.648415996056606
+pass
+
+24
+Finds the contrast ratio of two colors
+ContrastChecker.java
+getContrastRatio
+1e8c66 a34c6b
+1.3141695081977176
+1.3141695081977176
+pass
+
+25
+Finds the contrast ratio of two colors
+ContrastChecker.java
+getContrastRatio
+10af7d fd65c4
+1.0516702848607316
+1.0516702848607316
+pass
+

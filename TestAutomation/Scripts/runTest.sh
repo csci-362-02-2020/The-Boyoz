@@ -1,21 +1,27 @@
 #1bin/sh
+#Automated Testing Script Written By
+#Nathan Bell, Logan Sitar, and Paul Thomas
 
 #Moves up to the main folder
 cd ..
 
+#Clears any previously stored results
+rm Results/*.txt
+
 #Compiles all classes in TestCaseExecutables
 javac TestCaseExecutables/*.java
 
-for file in TestCases/*.txt
+
+for file in TestCases/*.txt #loop though all test cases
 	do
 		i=0
-	#echo $file read
-while read line
+while read line #fill an array with the data from the test cases
 	do
 		lines[$i]="$line";
 		i=$((i+1));
 		done < $file
 		
+	#move values from array into varibles
 	declare id=${lines[0]}
 	declare requirement=${lines[1]}
 	declare class=${lines[2]}
@@ -23,59 +29,59 @@ while read line
 	declare input=${lines[4]}
 	declare expectedOutput=${lines[5]}
 	declare output
+	declare passFail
 	
-	#echo $id
-	#echo $requirement
-	#echo $class
-	#echo  method to test = $method
-	#echo $input
-	#echo expected output = $expectedOutput
-	#echo 
 
-	#sleep 1
-	cd TestCaseExecutables
+	cd TestCaseExecutables #move to the location of the drivers
 
+
+	#Figure out what driver goes with the given test case
 	if [ $method == "rgb2Hsl" ]
-		then
-			echo $id
+		then	
 			output=$(java rgb2HslDriver $input)
-			#echo $output
 	
 	elif [ $method == "hex2Rgb" ]
 		then
-			echo $id
 			output=$(java hex2RgbDriver $input)
-			#echo $output
 	
 	elif [ $method == "calculate" ]
 		then
-			echo $id
 			output=$(java calculateDriver $input)
-			#echo $output
 			
 	elif [ $method == "distanceColor" ]
 		then
-			echo $id
 			output=$(java distanceColorDriver $input)
-			#echo $output
 			
 	elif [ $method == "getContrastRatio" ]
 		then
-			echo $id
 			output=$(java getContrastRatioDriver $input)
-			#echo $output
 	fi
 	
 	
 	#Check to see if test passed or failed
 	if [ "$output" == "$expectedOutput" ]
 		then
-			echo pass
+			passFail=pass
 		else 
-			echo fail
+			passFail=fail
 	fi
+	
+	cd ..
+	cd Results
+	
+	echo $id >> results.txt
+	echo $requirement >> results.txt
+	echo $class >> results.txt
+	echo $method >> results.txt
+	echo $input >> results.txt
+	echo $expectedOutput >> results.txt
+	echo $output >> results.txt
+	echo $passFail >> results.txt
+	echo >> results.txt
 	
 	cd ..
 	
 	done
+	
+	rm -f TestCaseExecutables/*.class #clears all compiled java classes
 	
