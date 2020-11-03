@@ -1,5 +1,5 @@
 6
-Takes a string input of a hexadecimal value and converts those values to a string RGB
+Converts hexadecimal value to a RGB value
 ColorConverter.java
 hex2Rgb
 000000

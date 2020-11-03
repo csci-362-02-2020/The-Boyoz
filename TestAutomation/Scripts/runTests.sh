@@ -2,59 +2,11 @@
 #Automated Testing Script Written By
 #Nathan Bell, Logan Sitar, and Paul Thomas
 
-#Moves up to the main folder
+#Runs separte script for setting up the html results file
 bash fileSetup.sh
 
+#Moves up to the main folder
 cd ..
-
-#Clears any previously stored results
-#rm Results/*.html
-#echo "table, th, td {  border: 1px solid black;}" >> Results/results.html
-#echo "<table style=\"width:100%\">" >> Results/results.html
-#echo "	<tr>" >> Results/results.html
-#echo "		<th>ID</th>" >> Results/results.html
-#echo "		<th>Requirement</th>" >> Results/results.html
-#echo "		<th>Class</th>" >> Results/results.html
-#echo "		<th>Method</th>" >> Results/results.html
-#echo "		<th>Input</th>" >> Results/results.html
-#echo "		<th>Outupt</th>" >> Results/results.html
-#echo "		<th>ExpectedOutput</th>" >> Results/results.html
-#echo "		<th>Result</th>" >> Results/results.html
-#echo "	</tr>" >> Results/results.html
-
-#cat > results.html <<_EOF_
-
-#<html>
-#<head>
-#<style>
-#table, th, td {
-#  border: 1px solid black;
-#}
-#</style>
-#</head>
-
-#<body>
-
-#<h2>Tanaguru Testing</h2>
-
-#<p>By The Boyoz</p>
-
-#<table style="width:100%">
-#  <tr>
-#    <th>ID</th>
-#    <th>Requirement</th> 
-#    <th>Class</th>
-#    <th>Method</th>
-#    <th>Input</th> 
-#    <th>Output</th>
-#    <th>ExpectedOutput</th> 
-#    <th>Result</th>
-#  </tr>
-#  
-#_EOF_
-
-#firefox results.html
-
 
 #Compiles all classes in TestCaseExecutables
 javac TestCaseExecutables/*.java
@@ -117,6 +69,7 @@ while read line #fill an array with the data from the test cases
 	cd ..
 	cd Results
 	
+	#appends testing information to the html file
 	echo "	<tr>" >> results.html
 	echo "		<td>$id</td>" >> results.html
 	echo "		<td>$requirement</td>" >> results.html
@@ -124,7 +77,7 @@ while read line #fill an array with the data from the test cases
 	echo "		<td>$method</td>">> results.html
 	echo "		<td>$input</td>" >> results.html
 	echo "		<td>$expectedOutput</td>" >> results.html
-	echo "		<td>$output<td>">> results.html
+	echo "		<td>$output</td>">> results.html
 	echo "		<td>$passFail</td>" >> results.html
 	echo "	</tr>" >> results.html
 	
@@ -134,6 +87,7 @@ while read line #fill an array with the data from the test cases
 	
 	done
 	
+	#opens the result file to the browser
 	firefox Results/results.html
 	
 	rm -f TestCaseExecutables/*.class #clears all compiled java classes

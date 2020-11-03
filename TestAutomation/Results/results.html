@@ -1,0 +1,275 @@
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+#t01 {
+background-color: #e8e8e8;
+}
+</style>
+</head>
+<body>
+<h2>Tanaguru Testing</h2>
+<p>By The Boyoz</p>
+<table width: 90%; id="t01">
+	<tr>
+		<th>ID</th>
+		<th>Requirement</th>
+		<th>Class</th>
+		<th>Method</th>
+		<th>Input</th>
+		<th>ExpectedOutput</th>
+		<th>Output</th>
+		<th>Result</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>Converts a color object to a HSL value</td>
+		<td>ColorConverter.java</td>
+		<td>rgb2Hsl</td>
+		<td>000000</td>
+		<td>hsl(0, 0%, 0%)</td>
+		<td>hsl(0, 0%, 0%)</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Converts a color object to a HSL value</td>
+		<td>ColorConverter.java</td>
+		<td>rgb2Hsl</td>
+		<td>ffffff</td>
+		<td>hsl(0, 0%, 100%)</td>
+		<td>hsl(0, 0%, 100%)</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Converts a color object to a HSL value</td>
+		<td>ColorConverter.java</td>
+		<td>rgb2Hsl</td>
+		<td>1234fc</td>
+		<td>hsl(231, 97%, 52%)</td>
+		<td>hsl(231, 97%, 52%)</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Converts a color object to a HSL value</td>
+		<td>ColorConverter.java</td>
+		<td>rgb2Hsl</td>
+		<td>abc123</td>
+		<td>hsl(68, 69%, 44%)</td>
+		<td>hsl(68, 69%, 44%)</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Converts a color object to a HSL value</td>
+		<td>ColorConverter.java</td>
+		<td>rgb2Hsl</td>
+		<td>8f32a6</td>
+		<td>hsl(288, 53%, 42%)</td>
+		<td>hsl(288, 53%, 42%)</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Converts hexadecimal value to a RGB value</td>
+		<td>ColorConverter.java</td>
+		<td>hex2Rgb</td>
+		<td>000000</td>
+		<td>java.awt.Color[r=0,g=0,b=0]</td>
+		<td>java.awt.Color[r=0,g=0,b=0]</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Converts hexadecimal value to a RGB value</td>
+		<td>ColorConverter.java</td>
+		<td>hex2Rgb</td>
+		<td>ffffff</td>
+		<td>java.awt.Color[r=255,g=255,b=255]</td>
+		<td>java.awt.Color[r=255,g=255,b=255]</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Converts hexadecimal value to a RGB value</td>
+		<td>ColorConverter.java</td>
+		<td>hex2Rgb</td>
+		<td>2f4a2c</td>
+		<td>java.awt.Color[r=47,g=74,b=44]</td>
+		<td>java.awt.Color[r=47,g=74,b=44]</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Converts hexadecimal value to a RGB value</td>
+		<td>ColorConverter.java</td>
+		<td>hex2Rgb</td>
+		<td>123abc</td>
+		<td>java.awt.Color[r=18,g=58,b=188]</td>
+		<td>java.awt.Color[r=18,g=58,b=188]</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Converts hexadecimal value to a RGB value</td>
+		<td>ColorConverter.java</td>
+		<td>hex2Rgb</td>
+		<td>a98cef</td>
+		<td>java.awt.Color[r=169,g=140,b=239]</td>
+		<td>java.awt.Color[r=169,g=140,b=239]</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Calculates Euclidian distance between two colors</td>
+		<td>DistanceCalculator.java</td>
+		<td>calculate</td>
+		<td>000000 ffffff</td>
+		<td>441.67</td>
+		<td>367.77</td>
+		<td>fail</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>Calculates Euclidian distance between two colors</td>
+		<td>DistanceCalculator.java</td>
+		<td>calculate</td>
+		<td>123abc abc123</td>
+		<td>255.04</td>
+		<td>135.0</td>
+		<td>fail</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Calculates Euclidian distance between two colors</td>
+		<td>DistanceCalculator.java</td>
+		<td>calculate</td>
+		<td>a1b2c3 1a2b3c</td>
+		<td>233.83</td>
+		<td>194.7</td>
+		<td>fail</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>Calculates Euclidian distance between two colors</td>
+		<td>DistanceCalculator.java</td>
+		<td>calculate</td>
+		<td>1e8c66 a34c6b</td>
+		<td>147.68</td>
+		<td>127.87</td>
+		<td>fail</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>Calculates Euclidian distance between two colors</td>
+		<td>DistanceCalculator.java</td>
+		<td>calculate</td>
+		<td>10af7d fd65c4</td>
+		<td>258.24</td>
+		<td>236.72</td>
+		<td>fail</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>Calculates distance between two colors</td>
+		<td>ContrastChecker.java</td>
+		<td>distanceColor</td>
+		<td>000000 ffffff</td>
+		<td>441.6729559300637</td>
+		<td>441.6729559300637</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Calculates distance between two colors</td>
+		<td>ContrastChecker.java</td>
+		<td>distanceColor</td>
+		<td>123abc abc123</td>
+		<td>255.03529167548558</td>
+		<td>255.03529167548558</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>Calculates distance between two colors</td>
+		<td>ContrastChecker.java</td>
+		<td>distanceColor</td>
+		<td>a1b2c3 1a2b3c</td>
+		<td>233.82685902179844</td>
+		<td>233.82685902179844</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Calculates distance between two colors</td>
+		<td>ContrastChecker.java</td>
+		<td>distanceColor</td>
+		<td>1e8c66 a34c6b</td>
+		<td>147.68209099278084</td>
+		<td>147.68209099278084</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>20</td>
+		<td>Calculates distance between two colors</td>
+		<td>ContrastChecker.java</td>
+		<td>distanceColor</td>
+		<td>10af7d 10af7d</td>
+		<td>0.0</td>
+		<td>0.0</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>21</td>
+		<td>Finds the contrast ratio of two colors</td>
+		<td>ContrastChecker.java</td>
+		<td>getContrastRatio</td>
+		<td>000000 ffffff</td>
+		<td>21.0</td>
+		<td>21.0</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>22</td>
+		<td>Finds the contrast ratio of two colors</td>
+		<td>ContrastChecker.java</td>
+		<td>getContrastRatio</td>
+		<td>123abc abc123</td>
+		<td>4.405327061494763</td>
+		<td>4.405327061494763</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>23</td>
+		<td>Finds the contrast ratio of two colors</td>
+		<td>ContrastChecker.java</td>
+		<td>getContrastRatio</td>
+		<td>a1b2c3 1a2b3c</td>
+		<td>6.648415996056606</td>
+		<td>6.648415996056606</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>24</td>
+		<td>Finds the contrast ratio of two colors</td>
+		<td>ContrastChecker.java</td>
+		<td>getContrastRatio</td>
+		<td>1e8c66 a34c6b</td>
+		<td>1.3141695081977176</td>
+		<td>1.3141695081977176</td>
+		<td>pass</td>
+	</tr>
+	<tr>
+		<td>25</td>
+		<td>Finds the contrast ratio of two colors</td>
+		<td>ContrastChecker.java</td>
+		<td>getContrastRatio</td>
+		<td>10af7d fd65c4</td>
+		<td>1.0516702848607316</td>
+		<td>1.0516702848607316</td>
+		<td>pass</td>
+	</tr>
