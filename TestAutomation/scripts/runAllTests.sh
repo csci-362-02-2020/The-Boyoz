@@ -2,17 +2,19 @@
 #Automated Testing Script Written By
 #Nathan Bell, Logan Sitar, and Paul Thomas
 
+
 #Runs separte script for setting up the html results file
+cd scripts
 bash fileSetup.sh
 
 #Moves up to the main folder
 cd ..
 
 #Compiles all classes in TestCaseExecutables
-javac TestCaseExecutables/*.java
+javac testCaseExecutables/*.java
 
 
-for file in TestCases/*.txt #loop though all test cases
+for file in testCases/*.txt #loop though all test cases
 	do
 		i=0
 while read line #fill an array with the data from the test cases
@@ -32,7 +34,7 @@ while read line #fill an array with the data from the test cases
 	declare passFail
 	
 
-	cd TestCaseExecutables #move to the location of the drivers
+	cd testCaseExecutables #move to the location of the drivers
 
 
 	#Figure out what driver goes with the given test case
@@ -67,19 +69,19 @@ while read line #fill an array with the data from the test cases
 	fi
 	
 	cd ..
-	cd Results
+	cd reports
 	
 	#appends testing information to the html file
-	echo "	<tr>" >> results.html
-	echo "		<td>$id</td>" >> results.html
-	echo "		<td>$requirement</td>" >> results.html
-	echo "		<td>$class</td>" >> results.html
-	echo "		<td>$method</td>">> results.html
-	echo "		<td>$input</td>" >> results.html
-	echo "		<td>$expectedOutput</td>" >> results.html
-	echo "		<td>$output</td>">> results.html
-	echo "		<td>$passFail</td>" >> results.html
-	echo "	</tr>" >> results.html
+	echo "	<tr>" >> testReport.html
+	echo "		<td>$id</td>" >> testReport.html
+	echo "		<td>$requirement</td>" >> testReport.html
+	echo "		<td>$class</td>" >> testReport.html
+	echo "		<td>$method</td>">> testReport.html
+	echo "		<td>$input</td>" >> testReport.html
+	echo "		<td>$expectedOutput</td>" >> testReport.html
+	echo "		<td>$output</td>">> testReport.html
+	echo "		<td>$passFail</td>" >> testReport.html
+	echo "	</tr>" >> testReport.html
 	
 	
 	
@@ -88,7 +90,7 @@ while read line #fill an array with the data from the test cases
 	done
 	
 	#opens the result file to the browser
-	firefox Results/results.html
+	firefox reports/testReport.html
 	
-	rm -f TestCaseExecutables/*.class #clears all compiled java classes
+	rm -f testCaseExecutables/*.class #clears all compiled java classes
 	
