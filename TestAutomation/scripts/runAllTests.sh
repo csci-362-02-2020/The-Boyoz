@@ -47,6 +47,7 @@ while read line #fill an array with the data from the test cases
 	
 	
 	#Check to see if test passed or failed
+	#pass fail messages are formatted to be an element of a table in html
 	if [ "$output" == "$expectedOutput" ]
 		then
 			passFail="<td style=\"color:#228B22\">pass</td>"
