@@ -33,17 +33,14 @@ while read line #fill an array with the data from the test cases
 	declare output
 	declare passFail
 	
-
+	#Adds Driver to the given method to get driver name
+	declare driver=$method"Driver"
+	
+	
 	cd testCaseExecutables #move to the location of the drivers
 
-
-	#Figure out what driver goes with the given test case
-		#Adds Driver to the given method to get driver name
-	declare temp="Driver"
-	declare method=$method$temp
-	
 	#Runs driver to get the output
-	output=$(java $method $input)
+	output=$(java $driver $input)
 	
 	
 	#Check to see if test passed or failed
