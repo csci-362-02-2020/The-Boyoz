@@ -49,9 +49,9 @@ while read line #fill an array with the data from the test cases
 	#Check to see if test passed or failed
 	if [ "$output" == "$expectedOutput" ]
 		then
-			passFail=pass
+			passFail="<td style=\"color:#228B22\">pass</td>"
 		else 
-			passFail=fail
+			passFail="<td style=\"color:#FF0000\">fail</td>"
 	fi
 	
 	cd ..
@@ -66,7 +66,7 @@ while read line #fill an array with the data from the test cases
 	echo "		<td>$input</td>" >> testReport.html
 	echo "		<td>$expectedOutput</td>" >> testReport.html
 	echo "		<td>$output</td>">> testReport.html
-	echo "		<td>$passFail</td>" >> testReport.html
+	echo "		$passFail" >> testReport.html
 	echo "	</tr>" >> testReport.html
 	
 	
