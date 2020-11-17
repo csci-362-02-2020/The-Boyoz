@@ -72,9 +72,15 @@ while read line #fill an array with the data from the test cases
 	cd ..
 	
 	done
+		
+	cd reports
+	
+	echo "</table> </html>" >> testReport.html
+	
+	cd ..
 	
 	#opens the result file to the browser
-	firefox reports/testReport.html
+	xdg-open reports/testReport.html
 	
 	rm -f testCaseExecutables/*.class #clears all compiled java classes
 	
