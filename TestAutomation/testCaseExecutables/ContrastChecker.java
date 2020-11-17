@@ -1,4 +1,4 @@
-/*
+ /*
  * Contrast Finder
  * Copyright (C) 2008-2013  Open-S Company
  *
@@ -63,7 +63,11 @@ public final class ContrastChecker {
         int greenFg = fgColor.getGreen();
         int blueFg = fgColor.getBlue();
         int blueBg = bgColor.getBlue();
-        return (Math.sqrt(Math.pow(redFg - redBg, 2) + Math.pow(greenFg - greenBg, 2) + Math.pow(blueFg - blueBg, 2)));
+        
+        //one of these lines needs to be commented out for the code to run correctly
+        
+        //return 2;// this is the line that is here to break the code and make test cases fail
+        return (Math.sqrt(Math.pow(redFg - redBg, 2) + Math.pow(greenFg - greenBg, 2) + Math.pow(blueFg - blueBg, 2))); //this line gives the correct output
     }
 
     /**
