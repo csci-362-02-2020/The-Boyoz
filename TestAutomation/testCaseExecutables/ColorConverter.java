@@ -124,23 +124,29 @@ public final class ColorConverter {
      * @return the RGB Color from hex Color
      */
     public static Color hex2Rgb(String colorStr) {
-        if (colorStr.charAt(0) == '#') {
-            String str = colorStr.substring(1);
-            if (str.matches(HEXADECIMAL_DICTIONNARY)
-                    && str.length() == RGB_HEXA_LENGTH) {
-                return getNewColor(str);
-            } else if (str.matches(HEXADECIMAL_DICTIONNARY)
-                    && str.length() == RGB_SHORT_HEXA_LENGTH) {
-                return getNewColorShortHexa(str);
-            }
-        } else if (colorStr.matches(HEXADECIMAL_DICTIONNARY)) {
-            if (colorStr.length() == RGB_HEXA_LENGTH) {
-                return getNewColor(colorStr);
-            } else if (colorStr.length() == RGB_SHORT_HEXA_LENGTH) {
-                return getNewColorShortHexa(colorStr);
-            }
-        }
-        return null;
+        //one of these lines needs to be commented out for the code to run correctly
+        
+        // uncomment this return and comment the other to break the code
+        return Color.decode("#eeeeee"); 
+        
+        //uncomment this if-else statement and comment the above return to get correct output
+        //if (colorStr.charAt(0) == '#') {
+        //    String str = colorStr.substring(1);
+        //    if (str.matches(HEXADECIMAL_DICTIONNARY)
+        //            && str.length() == RGB_HEXA_LENGTH) {
+        //        return getNewColor(str);
+        //    } else if (str.matches(HEXADECIMAL_DICTIONNARY)
+        //            && str.length() == RGB_SHORT_HEXA_LENGTH) {
+        //        return getNewColorShortHexa(str);
+        //    }
+        //} else if (colorStr.matches(HEXADECIMAL_DICTIONNARY)) {
+        //    if (colorStr.length() == RGB_HEXA_LENGTH) {
+        //        return getNewColor(colorStr);
+        //    } else if (colorStr.length() == RGB_SHORT_HEXA_LENGTH) {
+        //        return getNewColorShortHexa(colorStr);
+        //    }
+        //}
+        //return null;
     }
 
     /**
@@ -177,6 +183,13 @@ public final class ColorConverter {
         Integer red = color.getRed();
         Integer green = color.getGreen();
         Integer blue = color.getBlue();
+        
+        //one of these lines needs to be commented out for the code to run correctly
+        
+        // uncomment this return and comment the other to break the code
+        //return "fault"; 
+        
+        //uncomment this return statement and comment the above return to get correct output
         return ("rgb(" + red.toString() + ", " + green.toString() + ", " + blue.toString() + ")");
     }
 
@@ -207,6 +220,13 @@ public final class ColorConverter {
                 * (hsvTab[BRIGHTNESS] * CONSTANT_SL_COMPONENTS_HUNDRED) / CONSTANT_SL_COMPONENTS_TWO;
         float s = (hsvTab[SATURATION] * CONSTANT_SL_COMPONENTS_HUNDRED) * (hsvTab[BRIGHTNESS] * CONSTANT_SL_COMPONENTS_HUNDRED)
                 / (l < CONSTANT_S_COMPONENTS_FIFTY ? l * CONSTANT_SL_COMPONENTS_TWO : CONSTANT_S_COMPONENTS_TWO_HUNDRED - l * CONSTANT_SL_COMPONENTS_TWO);
+                
+        //one of these lines needs to be commented out for the code to run correctly
+        
+        // uncomment this return and comment the other to break the code
+        //return "fault"; 
+        
+        //uncomment this return statement and comment the above return to get correct output   
         return ("hsl(" + Float.valueOf(h).intValue()
                 + ", " + Float.valueOf(s).intValue() + "%"
                 + ", " + Float.valueOf(l).intValue() + "%" + ")");

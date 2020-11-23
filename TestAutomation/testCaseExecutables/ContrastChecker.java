@@ -66,8 +66,11 @@ public final class ContrastChecker {
         
         //one of these lines needs to be commented out for the code to run correctly
         
-        //return 2;// this is the line that is here to break the code and make test cases fail
-        return (Math.sqrt(Math.pow(redFg - redBg, 2) + Math.pow(greenFg - greenBg, 2) + Math.pow(blueFg - blueBg, 2))); //this line gives the correct output
+        // uncomment this return and comment the other to break the code
+        //return -1; 
+        
+        //uncomment this return and comment the other to get correct output
+        return (Math.sqrt(Math.pow(redFg - redBg, 2) + Math.pow(greenFg - greenBg, 2) + Math.pow(blueFg - blueBg, 2))); 
     }
 
     /**
@@ -92,6 +95,13 @@ public final class ContrastChecker {
     public static double getConstrastRatio(final Color fgColor, final Color bgColor) {
         double fgLuminosity = getLuminosity(fgColor);
         double bgLuminosity = getLuminosity(bgColor);
+        
+        //one of these lines needs to be commented out for the code to run correctly
+        
+        // uncomment this return and comment the if-else to break the code
+        //return -1; 
+        
+        //uncomment this if-else statement and comment the above return to get correct output
         if (fgLuminosity > bgLuminosity) {
             return computeContrast(fgLuminosity, bgLuminosity);
         } else {
