@@ -156,16 +156,5 @@ public final class ContrastChecker {
             return Math.pow(((rsgb + LUMINANCE_SUP_CONST) / LUMINANCE_SUP_CONST2), LUMINANCE_EXP);
         }
     }
-    
-    public static void main(String[] args){
-    	Color one,two;
-    	
-    	one = new Color(123,221,011);
-    	two = new Color(222,011,222);
-    	
-    	System.out.println(distanceColor(one,two)+"\n");
-    
-    }
-    
-    
+     
 }

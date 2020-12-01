@@ -127,7 +127,7 @@ public final class ColorConverter {
         //one of these lines needs to be commented out for the code to run correctly
         
         // uncomment this return and comment the other to break the code
-        //return Color.decode("#eeeeee"); 
+//        return Color.decode("#eeeeee"); 
         
         //uncomment this if-else statement and "return null;" and comment the above return to get correct output
         if (colorStr.charAt(0) == '#') {
@@ -224,15 +224,5 @@ public final class ColorConverter {
                 + ", " + Float.valueOf(s).intValue() + "%"
                 + ", " + Float.valueOf(l).intValue() + "%" + ")");
     }
-    
-    
-    public static void main(String[] args){
-    	Color test;
-    	String temp = "#FFFFFF";
-    	test = Color.decode(temp);
-    	System.out.println(getBrightness(test) + "\n"+ rgb2Hsl(test) +"\n"+ rgb2Hex(test) +"\n");
-    
-    }
-    
     
 }
